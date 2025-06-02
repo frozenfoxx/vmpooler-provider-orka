@@ -1,15 +1,15 @@
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'vmpooler-provider-vsphere/version'
+require 'vmpooler-provider-orka/version'
 
 Gem::Specification.new do |s|
-  s.name          = 'vmpooler-provider-vsphere'
-  s.version       = VmpoolerProviderVsphere::VERSION
-  s.authors       = ['Puppet']
-  s.email         = ['support@puppet.com']
+  s.name          = 'vmpooler-provider-orka'
+  s.version       = VmpoolerProviderOrka::VERSION
+  s.authors       = ['FrozenFOXX']
+  s.email         = ['frozenfoxx@cultoffoxx.net']
 
-  s.summary       = 'VMware provider for VMPooler'
-  s.homepage      = 'https://github.com/puppetlabs/vmpooler-provider-vsphere'
+  s.summary       = 'Orka provider for VMPooler'
+  s.homepage      = 'https://github.com/frozenfoxx/vmpooler-provider-orka'
   s.license       = 'Apache-2.0'
   s.required_ruby_version = Gem::Requirement.new('>= 2.3.0')
 

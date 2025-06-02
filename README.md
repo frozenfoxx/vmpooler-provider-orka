@@ -1,17 +1,17 @@
-# vmpooler-provider-vsphere
+# vmpooler-provider-orka
 
-- [vmpooler-provider-vsphere](#vmpooler-provider-vsphere)
+- [vmpooler-provider-orka](#vmpooler-provider-orka)
   - [Usage](#usage)
     - [Custom VM Config Attribute](#custom-vm-config-attribute)
   - [Update the Gemfile Lock](#update-the-gemfile-lock)
   - [Releasing](#releasing)
   - [License](#license)
 
-This is a provider for [VMPooler](https://github.com/puppetlabs/vmpooler) allows using vSphere as a source of machines. This provider was originally part of the main VMPooler code base but was extracted to be a standalone gem so that development could be done independently of VMPooler itself.
+This is a provider for [VMPooler](https://github.com/puppetlabs/vmpooler) allows using Orka as a source of machines. This provider was originally part of the main VMPooler code base but was extracted to be a standalone gem so that development could be done independently of VMPooler itself.
 
 ## Usage
 
-Include this gem in the same Gemfile that you use to install VMPooler itself and then define one or more pools with the `provider` key set to `vsphere`. VMPooler will take care of the rest.
+Include this gem in the same Gemfile that you use to install VMPooler itself and then define one or more pools with the `provider` key set to `orka`. VMPooler will take care of the rest.
 
 Examples of deploying VMPooler with this provider can be found in the [puppetlabs/vmpooler-deployment](https://github.com/puppetlabs/vmpooler-deployment) repository.
 
@@ -34,11 +34,11 @@ Verify, and update if needed, that the docker tag in the script and GitHub actio
 
 Follow these steps to publish a new GitHub release, and build and push the gem to <https://rubygems.org>.
 
-1. Bump the "VERSION" in `lib/vmpooler-provider-vsphere/version.rb` appropriately based on changes in `CHANGELOG.md` since the last release.
+1. Bump the "VERSION" in `lib/vmpooler-provider-orka/version.rb` appropriately based on changes in `CHANGELOG.md` since the last release.
 2. Run `./release-prep` to update `Gemfile.lock` and `CHANGELOG.md`.
 3. Commit and push changes to a new branch, then open a pull request against `main` and be sure to add the "maintenance" label.
 4. After the pull request is approved and merged, then navigate to Actions --> Release Gem --> run workflow --> Branch: main --> Run workflow.
 
 ## License
 
-vmpooler-provider-vsphere is distributed under the [Apache License, Version 2.0](http://www.apache.org/licenses/LICENSE-2.0.html). See the [LICENSE](LICENSE) file for more details.
+vmpooler-provider-orka is distributed under the [Apache License, Version 2.0](http://www.apache.org/licenses/LICENSE-2.0.html). See the [LICENSE](LICENSE) file for more details.

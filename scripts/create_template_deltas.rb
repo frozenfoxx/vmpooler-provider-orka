@@ -22,12 +22,12 @@ def create_template_deltas( folder )
   abort 'No config file (./vmpooler.yaml or ~/.vmpooler) found!' unless config
 
   vim = RbVmomi::VIM.connect(
-    :host     => config[ :providers ][ :vsphere ][ "server" ],
-    :user     => config[ :providers ][ :vsphere ][ "username" ],
-    :password => config[ :providers ][ :vsphere ][ "password" ],
+    :host     => config[ :providers ][ :orka ][ "server" ],
+    :user     => config[ :providers ][ :orka ][ "username" ],
+    :password => config[ :providers ][ :orka ][ "password" ],
     :ssl      => true,
     :insecure => true,
-  ) or abort "Unable to connect to #{config[ :vsphere ][ "server" ]}!"
+  ) or abort "Unable to connect to #{config[ :orka ][ "server" ]}!"
 
   containerView = vim.serviceContent.viewManager.CreateContainerView( {
     :container => vim.serviceContent.rootFolder,
